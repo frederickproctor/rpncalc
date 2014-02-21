@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rpnlib", "rpnlib\rpnlib.vcxproj", "{AB5F0324-B9C2-406D-AB22-8F7DBC2B6321}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rpn", "rpn\rpn.vcxproj", "{2121480F-1A3A-4B7E-AB93-C58187BA6F94}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AB5F0324-B9C2-406D-AB22-8F7DBC2B6321} = {AB5F0324-B9C2-406D-AB22-8F7DBC2B6321}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB5F0324-B9C2-406D-AB22-8F7DBC2B6321}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AB5F0324-B9C2-406D-AB22-8F7DBC2B6321}.Debug|Win32.Build.0 = Debug|Win32
+		{AB5F0324-B9C2-406D-AB22-8F7DBC2B6321}.Release|Win32.ActiveCfg = Release|Win32
+		{AB5F0324-B9C2-406D-AB22-8F7DBC2B6321}.Release|Win32.Build.0 = Release|Win32
+		{2121480F-1A3A-4B7E-AB93-C58187BA6F94}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2121480F-1A3A-4B7E-AB93-C58187BA6F94}.Debug|Win32.Build.0 = Debug|Win32
+		{2121480F-1A3A-4B7E-AB93-C58187BA6F94}.Release|Win32.ActiveCfg = Release|Win32
+		{2121480F-1A3A-4B7E-AB93-C58187BA6F94}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
