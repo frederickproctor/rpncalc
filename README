@@ -1,2 +1,4 @@
-This is "rpn", a reverse Polish notation expression evaluator.
+This is "rpn", a reverse Polish notation expression evaluator, with a
+command-line interface.
+
 
