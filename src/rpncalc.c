@@ -135,6 +135,25 @@ int ds_swap(DS *ds)
   return RPN_OK;
 }
 
+int ds_rot(DS *ds)
+{
+  double temp;
+  int t;
+
+  if (ds->next < 2) {
+    /* the rot of empty or one element is just the same stack */
+    return RPN_OK;
+  }
+
+  temp = ds->stack[0];
+  for (t = 0; t < ds->next - 1; t++) {
+    ds->stack[t] = ds->stack[t + 1];
+  }
+  ds->stack[ds->next -1] = temp;
+
+  return RPN_OK;
+}
+
 int ds_drop(DS *ds)
 {
   if (ds->next == 0) {
@@ -427,6 +446,8 @@ static int rpncalc_op(DS *ds, char *op)
     return ds_dup(ds);
   case compute_hash_n('s','w','a',4): /* swap */
     return ds_swap(ds);
+  case compute_hash_3('r','o','t'): /* rot */
+    return ds_rot(ds);
   case compute_hash_n('d','r','o',4): /* drop */
   case compute_hash_1('.'):	/* . short for drop */
     return ds_drop(ds);

@@ -31,6 +31,7 @@ extern int ds_allclear(DS *ds);
 extern int ds_push(DS *ds, double val);
 extern int ds_pop(DS *ds, double *val);
 extern int ds_swap(DS *ds);
+extern int ds_rot(DS *ds);
 extern int ds_replace(DS *ds, int howmany, double val);
 extern int ds_fromtop(DS *ds, int down, double *val);
 extern int ds_setbase(DS *ds, int base);
