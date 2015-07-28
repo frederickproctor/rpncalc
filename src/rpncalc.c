@@ -969,7 +969,6 @@ int rpncalc_eval(DS *ds, char *ptr)
 	ds_push(ds, x);
       } else {
 	/* it's not an operator or number */
-	ds_clear(ds);
 	return RPN_ERROR;
       }
     }
