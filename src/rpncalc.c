@@ -28,9 +28,9 @@ static const double CONST_LN10_INV = 0.43429448190325182765;
 static const double CONST_SPEED_OF_LIGHT = 299792458;
 
 /* useful conversion factors */
-static const double CONV_MI_TO_M = 5280.0 * 12.0 * .0254;
-static const double CONV_FT_TO_M = 12.0 * .0254;
-static const double CONV_IN_TO_MM = 0.039370078740157;
+static const double CONV_MI_TO_M = 5280.0 * 12.0 * 0.0254;
+static const double CONV_FT_TO_M = 12.0 * 0.0254;
+static const double CONV_IN_TO_MM = 25.4;
 
 #define TODEG(x) ((x) * 57.295779513082320875)
 #define TORAD(x) ((x) * 0.017453292519943295770)
