@@ -526,7 +526,7 @@ static int rpncalc_op(DS *ds, char *op)
   case compute_hash_2('+','-'):	/* +- */
     return ds_fromtop(ds, 0, &top) || ds_replace(ds, 1, -top);
   case compute_hash_3('i','n','v'): /* inv */
-    return ds_fromtop(ds, 0, &top) || ! fabs(top) > DBL_MIN || ds_replace(ds, 1, 1.0 / top);
+    return ds_fromtop(ds, 0, &top) || ! (fabs(top) > DBL_MIN) || ds_replace(ds, 1, 1.0 / top);
   case compute_hash_2('s','q'):	/* sq */
     return ds_fromtop(ds, 0, &top) || ds_replace(ds, 1, top * top);
   case compute_hash_n('s','q','r',4): /* sqr */
@@ -627,7 +627,7 @@ static int rpncalc_op(DS *ds, char *op)
   case compute_hash_1('x'):	/* x */
     return ds_fromtop(ds, 1, &next) || ds_fromtop(ds, 0, &top) || ds_replace(ds, 2, next * top);
   case compute_hash_1('/'):	/* / */
-    return ds_fromtop(ds, 1, &next) || ds_fromtop(ds, 0, &top) || ! fabs(top) > DBL_MIN || ds_replace(ds, 2, next / top);
+    return ds_fromtop(ds, 1, &next) || ds_fromtop(ds, 0, &top) || ! (fabs(top) > DBL_MIN) || ds_replace(ds, 2, next / top);
   case compute_hash_3('d','i','v'): /* div */
     if (ds_fromtop(ds, 1, &next)) return RPN_ERROR;
     if (ds_fromtop(ds, 0, &top)) return RPN_ERROR;
